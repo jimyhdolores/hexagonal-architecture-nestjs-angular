@@ -1,0 +1,22 @@
+<section class="pp-container">
+	<h1>Productos</h1>
+	<form [formGroup]="formProduct" class="pp-form" (ngSubmit)="saveProduct()">
+		<mat-form-field class="example-full-width">
+			<mat-label>Producto</mat-label>
+			<input matInput formControlName="description" />
+		</mat-form-field>
+
+		<mat-form-field class="example-full-width">
+			<mat-label>Precio</mat-label>
+			<input matInput type="number" formControlName="price" />
+		</mat-form-field>
+
+		<button mat-raised-button color="primary">Guardar</button>
+	</form>
+	<br />
+	<h2>Listado de productos</h2>
+	<mat-spinner *ngIf="showSpinner"></mat-spinner>
+	<mat-list role="list">
+		<mat-list-item role="listitem" *ngFor="let product of listProducts">{{ product.description }}</mat-list-item>
+	</mat-list>
+</section>

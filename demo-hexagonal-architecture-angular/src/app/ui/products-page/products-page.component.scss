@@ -1,0 +1,11 @@
+.pp-container {
+	display: flex;
+	flex-direction: column;
+
+	padding: 2em;
+
+	.pp-form {
+		display: flex;
+		flex-direction: column;
+	}
+}
